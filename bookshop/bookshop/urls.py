@@ -15,12 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 
 from books import views
+from auth.forms import LoginForm
 
 urlpatterns = [
     url(r'^$', views.book_list_view, name='home'),
     url(r'^books/(?P<category>.*)/$', views.book_list_view, name='book_list'),
     url(r'^book/(?P<pk>\d+)/$', views.book_detail_view, name='book_detail'),
+    url(r'^login/$', auth_views.login, {'template_name': 'auth/login.html', 'authentication_form': LoginForm}, name='login'),
     url(r'^admin/', admin.site.urls),
 ]
