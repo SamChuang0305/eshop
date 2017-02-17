@@ -1,0 +1,19 @@
+<ul class="nav navbar-nav navbar-right">
+  {% if user.is_authenticated %}
+    <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;XXX
+      <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;User Profile</a></li>
+      <li role="separator" class="divider"></li>
+      <li>
+        <a href="#"> <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp;Logout</a>
+      </li>
+    </ul>
+  </li>
+  {% else %}
+    <li><a href="{% url 'login' %}">Sign in&nbsp;<span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></a></li>
+  {% endif %}
+</ul>

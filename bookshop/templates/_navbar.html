@@ -17,10 +17,11 @@
         <li class="active"><a href="{% url 'home' %}">分類</a></li>
         <li><a href="#contact">特價</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right hidden-xs">
-        <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>
-        <li><a href="#"><i class="fa fa-lg fa-envelope-o"></i></a></li>
-      </ul>
+{#      <ul class="nav navbar-nav navbar-right hidden-xs">#}
+{#        <li><a href="#"><i class="fa fa-lg fa-facebook"></i></a></li>#}
+{#        <li><a href="#"><i class="fa fa-lg fa-envelope-o"></i></a></li>#}
+{#      </ul>#}
+      {% include 'account_dropdown.html' %}
     </div><!--/.nav-collapse -->
   </div>
 </nav>
