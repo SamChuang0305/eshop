@@ -21,7 +21,7 @@ class RegistrationView(CreateView):
         return reverse('success')
 
 
-class SuccessMessageView(LoginRequiredMixin, TemplateView):
+class SuccessMessageView(TemplateView):
     template_name = 'members/registration_success.html'
 
 
