@@ -24,7 +24,7 @@ urlpatterns = [
     url(r'^$', views.book_list_view, name='home'),
     url(r'^books/(?P<category>.*)/$', views.book_list_view, name='book_list'),
     url(r'^book/(?P<pk>\d+)/$', views.book_detail_view, name='book_detail'),
-    url(r'^login/$', auth_views.login, {'template_name': 'auth/login.html', 'authentication_form': LoginForm}, name='login'),
+    url(r'^login/$', auth_views.login, {'template_name': 'members/login.html', 'authentication_form': LoginForm}, name='login'),
     url(r'^logout/$', auth_views.logout, {'next_page': 'home'}, name='logout'),
     url(r'^admin/', admin.site.urls),
 ]
