@@ -37,7 +37,16 @@
           {% endif %}
         </blockquote>
         <p>
+          <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;{{ user.username }}
+        </p>
+        <p>
           <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp;{{ user.email }}
+        </p>
+        <p>
+          <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;&nbsp;{{ user.date_joined|date:"Y-m-d H:i:s" }}
+        </p>
+        <p>
+          <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;&nbsp;{{ user.last_login|date:"Y-m-d H:i:s" }}
         </p>
 
       </div>
