@@ -30,16 +30,15 @@
        </div>
       <div class="col-md-7">
         <blockquote>
-          {% if user.first_name or user.last_name %}
-            {{ user.first_name }}&nbsp;{{ user.last_name }}
+          {% if user.get_full_name %}
+            {{ user.get_full_name }}
           {% else %}
             {{ user.username }}
           {% endif %}
         </blockquote>
-        <div>
-          <ul class="list-unstyled member-info">
-          </ul>
-        </div>
+        <p>
+          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;&nbsp;{{ user.email }}
+        </p>
 
       </div>
     </div>
