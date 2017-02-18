@@ -14,7 +14,7 @@
     </ul>
   </li>
   {% else %}
-    <li><a href="{% url 'member_registration' %}">Sign up&nbsp;<span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></li>
+    <li><a href="{% url 'registration' %}">Sign up&nbsp;<span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></li>
     <li><a href="{% url 'login' %}?next={% url 'home' %}">Sign in&nbsp;<span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></a></li>
   {% endif %}
 </ul>
