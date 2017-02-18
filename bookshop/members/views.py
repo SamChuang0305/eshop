@@ -12,7 +12,7 @@ class MemberProfileView(LoginRequiredMixin, DetailView):
     template_name = 'members/profile.html'
 
 
-class RegistrationView(LoginRequiredMixin, CreateView):
+class RegistrationView(CreateView):
     form_class = RegistrationForm
     model = User
     template_name = 'members/registration.html'
