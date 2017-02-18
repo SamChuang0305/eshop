@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 
 from books import views
-from auth.forms import LoginForm
+from members.forms import LoginForm
 
 urlpatterns = [
     url(r'^$', views.book_list_view, name='home'),
