@@ -47,11 +47,7 @@
           <form method="post" action="{% url 'social:disconnect' backend %}">
             {% csrf_token %}
 
-            {% if backend in backends.not_associated %}
-              <button type="button" class="disabled btn btn-social btn-{{ backend }}" disabled="disabled">
-                <span class="fa fa-{{ backend }}"></span>Disconnect&nbsp;
-              </button>
-            {% else %}
+            {% if backend not in backends.not_associated %}
               <button type="submit" class="btn btn-social btn-{{ backend }}">
                 <span class="fa fa-{{ backend }}"></span>Disconnect&nbsp;
               </button>
