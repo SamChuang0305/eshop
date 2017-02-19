@@ -6,7 +6,7 @@
       <span class="caret"></span>
     </a>
     <ul class="dropdown-menu">
-      <li><a href="{% url 'member_profile' pk=request.user.id %}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;User Profile</a></li>
+      <li><a href="{% url 'members:profile' pk=request.user.id %}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;User Profile</a></li>
       <li role="separator" class="divider"></li>
       <li>
         <a href="{% url 'logout' %}"> <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Logout</a>
@@ -14,7 +14,7 @@
     </ul>
   </li>
   {% else %}
-    <li><a href="{% url 'registration' %}">Sign up&nbsp;<span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></li>
+    <li><a href="{% url 'members:registration' %}">Sign up&nbsp;<span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></li>
     <li><a href="{% url 'login' %}?next={% url 'home' %}">Sign in&nbsp;<span class="glyphicon glyphicon-log-in" aria-hidden="true"></span></a></li>
   {% endif %}
 </ul>

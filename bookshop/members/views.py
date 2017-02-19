@@ -28,7 +28,7 @@ class RegistrationView(CreateView):
     template_name = 'members/registration.html'
 
     def get_success_url(self):
-        return reverse('success')
+        return reverse('members:success')
 
 
 class SuccessMessageView(TemplateView):
