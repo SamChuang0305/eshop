@@ -145,6 +145,20 @@ AUTHENTICATION_BACKENDS = [
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
+SOCIAL_AUTH_PIPELINE = (
+    'social_core.pipeline.social_auth.social_details',
+    'social_core.pipeline.social_auth.social_uid',
+    'social_core.pipeline.social_auth.auth_allowed',
+    'social_core.pipeline.social_auth.social_user',
+    'social_core.pipeline.user.get_username',
+    # Create a user account if we haven't found one yet.
+    'social_core.pipeline.user.create_user',
+    # Create the record that associates the social account with the user.
+    'social_core.pipeline.social_auth.associate_user',
+    'social_core.pipeline.social_auth.load_extra_data',
+    'social_core.pipeline.user.user_details',
+)
+
 SOCIAL_AUTH_DISCONNECT_PIPELINE = (
     # Verifies that the social association can be disconnected from the current
     # user (ensure that the user login mechanism is not compromised by this
