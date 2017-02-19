@@ -27,5 +27,6 @@ urlpatterns = [
     url(r'^login/$', auth_views.login, {'template_name': 'members/login.html', 'authentication_form': LoginForm}, name='login'),
     url(r'^logout/$', auth_views.logout, {'next_page': 'home'}, name='logout'),
     url(r'^members/', include('members.urls', namespace='members')),
+    url(r'^socialauth/', include('social_django.urls', namespace='social')),
     url(r'^admin/', admin.site.urls),
 ]
